@@ -24,5 +24,26 @@
         {{ post.conteudo|safe }}
     </div>
     </section>
+    <div class="comentarios">
+        <header>
+            <h3>Comentários <a href="{% url 'news:create_comment' post.id %}"><img src="{% static 'Edit.png' %}" class="editcoment"></a></h3>
+        </header>
+        <ul>
+            {% if post.comment_set.all %}
+                {% for comment in post.comment_set.all %}
+                    <figure>
+                        <div class="singlecomment">
+                            <div class="singlecommentauthor">
+                                <p class="commentauthor">{{ comment.autor }}</p>
+                            </div>
+                                <p class="commentcontent">{{ comment.texto }}</p>
+                        </div>
+                    </figure>
+                {% endfor %}
+            {% else %}
+                <p class="nocomment">Ainda não existe nenhuma resenha para este filme.</p>
+            {% endif %}
+        </ul>
+    </div>
 </div>
 {% endblock content %}

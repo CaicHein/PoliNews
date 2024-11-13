@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from .models import Post
+from .models import Post, Comment
 
 def list_posts_v1(request):
     posts = Post.objects.all()
@@ -38,3 +38,18 @@ def delete_post_v1(request, pk):
         post.delete()
         return HttpResponseRedirect(reverse('news:list_v1'))
     return render(request, 'news/delete.html', {'post': post})
+
+def create_comment_v1(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    
+    if request.method == 'POST':
+        comment = Comment(
+            autor=request.user,
+            texto=request.POST.get('texto'),
+            post=post
+        )
+        comment.save()
+        return HttpResponseRedirect(reverse('news:detail', args=(post_id, )))
+    
+    context = {'post': post}
+    return render(request, 'news/comment.html', context)

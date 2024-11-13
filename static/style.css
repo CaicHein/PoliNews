@@ -398,10 +398,11 @@ figure {
   margin: 0;
 }
 
-.nocomment{
+ul .nocomment{
   color: rgb(173, 173, 173);
   font-size: 2vw;
   font-family: regularMS;
+  margin-left: 4vw;
 }
 
 .conteudo-inserido{
