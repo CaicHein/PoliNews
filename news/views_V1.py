@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from .models import Post, Comment
+from .models import Post, Comment, Category
 
 def list_posts_v1(request):
     posts = Post.objects.all()
@@ -53,3 +53,12 @@ def create_comment_v1(request, post_id):
     
     context = {'post': post}
     return render(request, 'news/comment.html', context)
+
+def category_list(request):
+    categorias = Category.objects.all()
+    return render(request, 'news/category_list.html', {'categorias': categorias})
+
+def category_detail(request, categoria_id):
+    categoria = get_object_or_404(Category, pk=categoria_id)
+    posts = categoria.posts.all()
+    return render(request, 'news/post_list.html', {'categoria': categoria, 'posts': posts})

@@ -19,6 +19,14 @@
             {% endif%}
         </h2>
         <p>{{ post.data_postagem|date}}</p>
+        <h3>Categorias:</h3>
+        <ul>
+            {% for categoria in post.categorias.all %}
+                <li>
+                    <a href="{% url 'news:category_detail' categoria.id %}">{{ categoria.nome }}</a>
+                </li>
+            {% endfor %}
+        </ul>
     </div> 
     <div class="conteudo-inserido">
         {{ post.conteudo|safe }}
@@ -35,13 +43,14 @@
                         <div class="singlecomment">
                             <div class="singlecommentauthor">
                                 <p class="commentauthor">{{ comment.autor }}</p>
+                                <p class="commenttime">({{ comment.data_postagem }})</p>
                             </div>
                                 <p class="commentcontent">{{ comment.texto }}</p>
                         </div>
                     </figure>
                 {% endfor %}
             {% else %}
-                <p class="nocomment">Ainda não existe nenhuma resenha para este filme.</p>
+                <p class="nocomment">Ainda não existem comentários.</p>
             {% endif %}
         </ul>
     </div>
