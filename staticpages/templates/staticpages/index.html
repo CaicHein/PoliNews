@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Página Inicial
+{% endblock title %}
+{% block content %}
+<div class="homepage">
+    <div class="imgcontainer">
+        <img src="{% static 'poli.jpg' %}">
+        <div class="overlay"><h1>Bem-vindo<br> ao PoliNews!</h1> </div>
+    </div>
+    <div class="textcontainer"><p>O PoliNews é o portal de notícias da Escola Politécnica da Universidade de São Paulo (USP), criado para manter a comunidade acadêmica e os visitantes informados sobre os principais acontecimentos, inovações e eventos da nossa instituição. Aqui, você encontrará notícias sobre pesquisas, projetos estudantis, eventos, conquistas e muito mais. Nossa missão é promover a troca de conhecimento e destacar o impacto da Poli-USP na sociedade, oferecendo um espaço confiável e acessível para acompanhar tudo o que acontece no coração da engenharia brasileira.</p></div>
+</div>
+{% endblock content %}
