@@ -10,6 +10,12 @@ urlpatterns = [
     path('v1/update/<int:pk>/', views_V1.update_post_v1, name='update_v1'),
     path('v1/delete/<int:pk>/', views_V1.delete_post_v1, name='delete_v1'),
 
+    path('v2/', views_V2.list_posts_v2, name='list_v2'),
+    path('v2/<int:pk>/', views_V2.detail_post_v2, name='detail_v2'),
+    path('v2/create/', views_V2.create_post_v2, name='create_v2'),
+    path('v2/update/<int:pk>/', views_V2.update_post_v2, name='update_v2'),
+    path('v2/delete/<int:pk>/', views_V2.delete_post_v2, name='delete_v2'),
+
     path('', views_V3.ListView.as_view(), name='index'),
     path('<int:pk>/', views_V3.DetailView.as_view(), name='detail'),
     path('create/', views_V3.CreateView.as_view(), name='create'),
