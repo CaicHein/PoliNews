@@ -9,7 +9,10 @@
                         <div class="newsimg"> 
                             <img src="{{ post.img_url }}"/>
                         </div>
-                        <p>{{ post.titulo }} <br> ({{ post.data_postagem }})</p>
+                        <div class="newstext">
+                            <p>{{ post.titulo }}</p>
+                            <p class="dataindex">{{ post.data_postagem|date }}</p>
+                        </div>
                     </div>
                 </a>
             </article>

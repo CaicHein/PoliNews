@@ -234,6 +234,11 @@ footer {
 .news:hover{
   box-shadow: 1vw 1vw 1.5vw rgba(0, 0, 0, 0.6);
 }
+.news .dataindex{
+  font-family: regularMS;
+  font-size: 1.8vw;
+  color: rgb(173, 173, 173);
+}
 
 .newsimg{
   height: 100%;
@@ -400,6 +405,7 @@ figure {
 }
 
 .conteudo-inserido{
+  font-size: 1.5vw;
   color: white;
   display: flex;
   flex-direction: column;
@@ -410,6 +416,67 @@ figure {
   margin-top: 3vw;
   margin: 0 auto ;
   margin-bottom: 3vw;
+}
+.conteudo-inserido h1 {
+  font-size: 3vw;
+}
+
+.conteudo-inserido h2 {
+  font-size: 2.5vw;
+}
+
+.conteudo-inserido h3 {
+  font-size: 2vw;
+}
+
+.conteudo-inserido h4 {
+  font-size: 1.8vw;
+}
+
+.conteudo-inserido h5 {
+  font-size: 1.6vw;
+}
+
+.conteudo-inserido h6 {
+  font-size: 1.4vw;
+}
+
+.conteudo-inserido p,
+.conteudo-inserido li {
+  font-size: 1.5vw;
+}
+
+.conteudo-inserido a {
+  font-size: 1.5vw;
+}
+
+.conteudo-inserido blockquote {
+  font-size: 1.6vw;
+}
+
+.conteudo-inserido code,
+.conteudo-inserido pre {
+  font-size: 1.4vw;
+}
+
+.conteudo-inserido span,
+.conteudo-inserido strong,
+.conteudo-inserido em {
+  font-size: 1.5vw;
+}
+
+.conteudo-inserido caption,
+.conteudo-inserido figcaption {
+  font-size: 1.3vw;
+}
+
+.conteudo-inserido small {
+  font-size: 1.2vw;
+}
+
+.conteudo-inserido sub,
+.conteudo-inserido sup {
+  font-size: 1vw;
 }
 
 .nopub{

@@ -18,7 +18,7 @@
             </div>
             {% endif%}
         </h2>
-        <p>{{ post.data_postagem}}</p>
+        <p>{{ post.data_postagem|date}}</p>
     </div> 
     <div class="conteudo-inserido">
         {{ post.conteudo|safe }}
