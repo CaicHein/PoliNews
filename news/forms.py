@@ -8,8 +8,10 @@ class PostForm(ModelForm):
         fields = [
             'titulo',
             'conteudo',
+            'img_url'
         ]
         labels = {
             'titulo': 'Título',
             'conteudo': 'Conteúdo',
+            'img_url': 'URL da imagem',
         }

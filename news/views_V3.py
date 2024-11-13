@@ -17,12 +17,14 @@ class CreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.CreateView
     form_class = PostForm
     template_name = 'news/create.html'
     permission_required = 'news.add_post'
+    success_url = reverse_lazy('news:index')
 
 class UpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'news/update.html'
     permission_required = 'news.change_post'
+    success_url = reverse_lazy('news:index')
 
 class DeleteView(LoginRequiredMixin, PermissionRequiredMixin, generic.DeleteView):
     model = Post

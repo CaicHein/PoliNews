@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if post_list %}
+        <section class="lista-de-cards">
+            {% for post in post_list %}
+            <article class="articlenews">
+                <a href="{% url 'news:detail' post.id %}">
+                    <div class="news">
+                        <div class="newsimg"> 
+                            <img src="{{ post.img_url }}"/>
+                        </div>
+                        <p>{{ post.titulo }} <br> ({{ post.data_postagem }})</p>
+                    </div>
+                </a>
+            </article>
+            {% endfor %}
+        </section>
+    {% else %}
+        <div class="nopub">
+            <p>Nenhuma publicação foi encontrada.</p>
+        </div>
+    {% endif %}
+{% endblock content %}

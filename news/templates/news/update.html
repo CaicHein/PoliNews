@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Atualizar publicação {{ post.titulo }} ({{ post.data_postagem}})</h2>
+<form method="POST" action="{% url 'news:update' post.id%}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Atualizar</button>
+</form>
+
+{% endblock content %}

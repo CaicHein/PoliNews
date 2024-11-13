@@ -266,6 +266,7 @@ footer {
   margin: auto;
   width: 90vw;
   border-radius: 5vw;
+  margin-bottom: 3vw;
 }
 
 .imgdetail{
@@ -398,8 +399,35 @@ figure {
   font-family: regularMS;
 }
 
+.conteudo-inserido{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  border-radius: 5vw;
+  margin-top: 3vw;
+  margin: 0 auto ;
+  margin-bottom: 3vw;
+}
 
-
-
+.nopub{
+  background-color:rgb(60, 60, 60);
+  color: rgb(179, 179, 179);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 43vw;
+  border-radius: 5vw;
+  margin-bottom: 3vw;
+  margin-top: 3vw;
+  margin: 0 auto ;
+}
+.nopub p{
+  font-family: BoldMS;
+  font-size: 2vw;
+}
 
 
