@@ -8,8 +8,8 @@ pip install -r requirements.txt
 echo "Coletando arquivos estáticos..."
 python manage.py collectstatic --no-input
 
+python manage.py makemigrations
+
 echo "Aplicando migrações..."
 python manage.py migrate
 
-# Importar dados do arquivo JSON
-python manage.py loaddata data.json
