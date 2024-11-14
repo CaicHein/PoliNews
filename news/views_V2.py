@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
+from django.contrib.auth.decorators import login_required, permission_required
 
 def list_posts_v2(request):
     posts = Post.objects.all()
@@ -40,6 +41,7 @@ def delete_post_v2(request, pk):
         return HttpResponseRedirect(reverse('news:list_v2'))
     return render(request, 'news/delete.html', {'post': post})
 
+@login_required 
 def create_comment_v2(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
     
