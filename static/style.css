@@ -656,6 +656,7 @@ li .linkcat{
 
 .create-form input[type="text"],
 .create-form input[type="url"],
+.create-form input[type="password"],
 .create-form textarea,
 .create-form select {
   width: 100%;
@@ -710,5 +711,49 @@ li .linkcat{
 }
 
 .back-link a:hover {
+  text-decoration: underline;
+}
+.create-form .helptext,
+.create-form ul {
+  font-size: 1vw; 
+  font-family: 'regularMS', sans-serif;
+  color: #666; 
+  margin-top: 0.5vw;
+  margin-bottom: 1vw;
+}
+
+.create-form ul {
+  list-style-type: disc; 
+  padding-left: 1.5vw; 
+}
+.error-message {
+  font-family: 'regularMS', sans-serif;
+  font-size: 1.2vw;
+  color: #d9534f;
+  margin-bottom: 1.5vw;
+  text-align: center;
+}
+
+.info-message {
+  font-family: 'regularMS', sans-serif;
+  font-size: 1.2vw;
+  color: #666;
+  margin-bottom: 1.5vw;
+  text-align: center;
+}
+
+.info-text {
+  font-family: 'regularMS', sans-serif;
+  font-size: 1.2vw;
+  margin-top: 1.5vw;
+  text-align: center;
+}
+
+.info-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.info-text a:hover {
   text-decoration: underline;
 }

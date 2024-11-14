@@ -5,26 +5,28 @@ Login
 {% endblock title %}
 
 {% block content %}
-<h1>Login de Usuário</h1>
+<div class="form-container">
 
-{% if form.errors %}
-<p>Sua senha e nome de usuário não correspondem. Tente novamente.</p>
-{% endif %}
+    {% if form.errors %}
+    <p class="error-message">Sua senha e nome de usuário não correspondem. Tente novamente.</p>
+    {% endif %}
 
-{% if next %}
-{% if user.is_authenticated %}
-<p>Sua conta não possui acesso a esta página. Para prosseguir, faça um login com uma conta que tenha.</p>
-{% else %}
-<p>Faça o login para ver esta página.</p>
-{% endif %}
-{% endif %}
+    {% if next %}
+        {% if user.is_authenticated %}
+        <p class="error-message">Sua conta não possui acesso a esta página. Para prosseguir, faça um login com uma conta que tenha.</p>
+        {% else %}
+        <p class="info-message">Faça o login para ver esta página.</p>
+        {% endif %}
+    {% endif %}
 
-<form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    {{ form.as_p}}
-    <button type="submit" value="login">Entrar</button>
-    <input type="hidden" name="next" value="{{ next }}">
-</form>
+    <form method="post" action="{% url 'login' %}" class="create-form">
+        <h1 class="form-title">Login de Usuário</h1>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit-button">Entrar</button>
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
 
-<p>Não possui usuário? <a href="{% url 'signup' %}">Cadastre-se</a></p>
+    <p class="info-text">Não possui usuário? <a href="{% url 'signup' %}">Cadastre-se</a></p>
+</div>
 {% endblock %}
