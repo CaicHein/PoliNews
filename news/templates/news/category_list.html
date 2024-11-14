@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Categorias</h2>
-<ul>
-    {% for categoria in categorias %}
-        <li>
-            <a href="{% url 'news:category_detail' categoria.id %}">{{ categoria.nome }}</a> - {{ categoria.descricao }}
-        </li>
-    {% endfor %}
-</ul>
+    <div class="categories">
+        <h2>Categorias</h2>
+        <ul>
+            {% for categoria in categorias %}
+                <li>
+                    <a href="{% url 'news:category_detail' categoria.id %}" class="linkcat">
+                        <div class="categorieslist">
+                            <h1>{{ categoria.nome }}</h1>
+                            <p>{{ categoria.descricao }}</p>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}

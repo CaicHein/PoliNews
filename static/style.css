@@ -230,6 +230,7 @@ footer {
   font-family: SemiBoldMS;
   color: white;
   text-decoration: none;
+  margin-bottom: 0;
 }
 .news:hover{
   box-shadow: 1vw 1vw 1.5vw rgba(0, 0, 0, 0.6);
@@ -314,7 +315,7 @@ footer {
   font-size: 1.5vw;
   font-family: regularMS;
   color: rgb(170, 170, 170);
-  margin-bottom: -1vw;
+  margin-bottom: 0vw;
 }
 .textdetail img:hover{
   filter: invert(100%) sepia(1) saturate(5) hue-rotate(180deg) brightness(0.8);
@@ -415,78 +416,92 @@ ul .nocomment{
 }
 
 .conteudo-inserido{
+  font-family: regularMS;
   font-size: 1.5vw;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
   width: 80vw;
-  border-radius: 5vw;
   margin-top: 3vw;
   margin: 0 auto ;
-  margin-bottom: 3vw;
+  margin-bottom: 0vw;
 }
 .conteudo-inserido h1 {
   font-size: 3vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido h2 {
   font-size: 2.5vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido h3 {
   font-size: 2vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido h4 {
   font-size: 1.8vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido h5 {
   font-size: 1.6vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido h6 {
   font-size: 1.4vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido p,
 .conteudo-inserido li {
   font-size: 1.5vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido a {
   font-size: 1.5vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido blockquote {
   font-size: 1.6vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido code,
 .conteudo-inserido pre {
   font-size: 1.4vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido span,
 .conteudo-inserido strong,
 .conteudo-inserido em {
   font-size: 1.5vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido caption,
 .conteudo-inserido figcaption {
   font-size: 1.3vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido small {
   font-size: 1.2vw;
+  font-family: regularMS;
 }
 
 .conteudo-inserido sub,
 .conteudo-inserido sup {
   font-size: 1vw;
+  font-family: regularMS;
 }
 
 .nopub{
@@ -506,5 +521,89 @@ ul .nocomment{
   font-family: BoldMS;
   font-size: 2vw;
 }
+.catdet{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.8vw;
+  margin-bottom: -1.6vw;
+}
+.catdet a, h1{
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-family: regularMS;
+  color: rgb(170, 170, 170);
+  margin-right: 1vw;
+  font-weight: normal;
+}
+.catdet a:hover{
+  text-decoration: underline;
+}
 
+.catindex{
+  width: 90vw;
+  margin: auto;
+  margin-top: -3vw;
 
+}
+
+.catindex h2{
+  font-family: BoldMS;
+  font-size: 3vw;
+  color: white;
+}
+
+.categories{
+  width: 90vw;
+  margin: auto;
+  margin-top: -3vw;
+}
+
+.categories h2{
+  font-family: BoldMS;
+  font-size: 3vw;
+  color: white;
+}
+
+.categories ul{
+  list-style-type: none;
+  font-size: 2vw;
+  padding-left: 0vw;
+}
+
+.categorieslist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(60, 60, 60);
+  margin: 0 auto;
+  width: 90vw;
+  height: 8vw;
+  border-radius: 2vw;
+  margin-bottom: 2vw;
+  padding-top: 1vw;
+}
+
+.categorieslist p{
+  padding-left: 1vw;
+  color: rgb(175, 175, 175);
+  font-family: regularMS;
+  font-size: 1.5vw;
+  margin-top: -0.5vw;
+  margin-left: 2vw;
+  margin-bottom: 2.3vw;
+}
+.categorieslist h1{
+  margin-left: 2vw;
+  color: white;
+  text-decoration: none;
+  font-family: SemiBoldMS;
+  font-size: 1.8vw;
+}
+.categorieslist:hover {
+  background-color: rgb(0, 0, 0);
+}
+li .linkcat{
+  text-decoration: none;
+}

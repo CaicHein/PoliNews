@@ -62,3 +62,13 @@ def category_detail(request, categoria_id):
     categoria = get_object_or_404(Category, pk=categoria_id)
     posts = categoria.posts.all()
     return render(request, 'news/post_list.html', {'categoria': categoria, 'posts': posts})
+
+def post_list(request, categoria_id=None):
+    if categoria_id:
+        categoria = get_object_or_404(Category, pk=categoria_id)
+        post_list = categoria.posts.all()  
+    else:
+        categoria = None
+        post_list = Post.objects.all()  
+    
+    return render(request, 'news/index.html', {'post_list': post_list, 'categoria': categoria})

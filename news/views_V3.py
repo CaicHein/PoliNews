@@ -20,6 +20,9 @@ class CreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.CreateView
     permission_required = 'news.add_post'
     success_url = reverse_lazy('news:index')
 
+    def form_valid(self, form):
+        return super().form_valid(form)
+
 class UpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.UpdateView):
     model = Post
     form_class = PostForm
@@ -50,3 +53,4 @@ class CreateCommentView(CreateView):
         context = super().get_context_data(**kwargs)
         context['post'] = get_object_or_404(Post, pk=self.kwargs['id'])
         return context
+    

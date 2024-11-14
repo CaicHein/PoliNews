@@ -5,7 +5,6 @@
 {% endblock title %}
 {% block content %}
 <div class="detailcontainer">
-    <section class="dados-de-filme">
     <div class="imgdetail">  
         <img src="{{ post.img_url }}"/>
     </div> 
@@ -18,20 +17,18 @@
             </div>
             {% endif%}
         </h2>
-        <p>{{ post.data_postagem|date}}</p>
-        <h3>Categorias:</h3>
-        <ul>
+        <div class="catdet">
+            <h1>Categorias:</h1>
             {% for categoria in post.categorias.all %}
-                <li>
-                    <a href="{% url 'news:category_detail' categoria.id %}">{{ categoria.nome }}</a>
-                </li>
+                <a href="{% url 'news:category_detail' categoria.id %}">{{ categoria.nome }}</a>
             {% endfor %}
-        </ul>
+        </div>
+        <p>{{ post.data_postagem|date}}</p>
     </div> 
     <div class="conteudo-inserido">
         {{ post.conteudo|safe }}
     </div>
-    </section>
+
     <div class="comentarios">
         <header>
             <h3>Comentários <a href="{% url 'news:create_comment' post.id %}"><img src="{% static 'Edit.png' %}" class="editcoment"></a></h3>

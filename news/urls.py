@@ -11,7 +11,7 @@ urlpatterns = [
     path('v1/delete/<int:pk>/', views_V1.delete_post_v1, name='delete_v1'),
     path('<int:post_id>/V1/create_comment/', views_V1.create_comment_v1, name='create_comment_v1'),
     path('categorias/', views_V1.category_list, name='category_list'),
-    path('categorias/<int:categoria_id>/', views_V1.category_detail, name='category_detail'),
+    path('categorias/<int:categoria_id>/', views_V1.post_list, name='category_detail'),
 
     path('v2/', views_V2.list_posts_v2, name='list_v2'),
     path('v2/<int:pk>/', views_V2.detail_post_v2, name='detail_v2'),

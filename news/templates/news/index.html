@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+    {% if categoria %}
+        <div class="catindex">
+            <h2>Posts na Categoria: {{ categoria.nome }}</h2>
+        </div>
+    {% endif %}
+
     {% if post_list %}
         <section class="lista-de-cards">
             {% for post in post_list %}
@@ -7,7 +13,7 @@
                 <a href="{% url 'news:detail' post.id %}">
                     <div class="news">
                         <div class="newsimg"> 
-                            <img src="{{ post.img_url }}"/>
+                            <img src="{{ post.img_url }}" alt="{{ post.titulo }}">
                         </div>
                         <div class="newstext">
                             <p>{{ post.titulo }}</p>
@@ -24,3 +30,4 @@
         </div>
     {% endif %}
 {% endblock content %}
+
