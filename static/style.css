@@ -233,7 +233,7 @@ footer {
   margin-bottom: 0;
 }
 .news:hover{
-  box-shadow: 1vw 1vw 1.5vw rgba(0, 0, 0, 0.6);
+  background-color: black;
 }
 .news .dataindex{
   font-family: regularMS;
@@ -606,4 +606,109 @@ ul .nocomment{
 }
 li .linkcat{
   text-decoration: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3vw;
+}
+
+.form-title {
+  font-family: 'SemiBoldMS';
+  font-size: 2vw;
+  margin-bottom: 2vw;
+  text-align: center;
+  color: black;
+  margin-top: 0vw;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3vw;
+}
+
+.form-title {
+  font-family: 'SemiBoldMS';
+  font-size: 2vw;
+  margin-bottom: 2vw;
+  text-align: center;
+  color: black;
+  margin-top: 0vw;
+}
+
+.create-form {
+  width: 40vw;
+  padding: 2vw;
+  border-radius: 0.5vw;
+  background-color: #f9f9f9;
+}
+
+.create-form p {
+  font-family: 'regularMS', sans-serif;
+  font-size: 1.5vw;
+}
+
+.create-form input[type="text"],
+.create-form input[type="url"],
+.create-form textarea,
+.create-form select {
+  width: 100%;
+  padding: 0.8vw;
+  margin-bottom: 1.5vw;
+  font-family: 'regularMS', sans-serif;
+  font-size: 1.2vw;
+  border: 0.1vw solid #ccc;
+  border-radius: 0.5vw;
+  box-sizing: border-box;
+}
+
+.create-form textarea {
+  resize: vertical;
+  min-height: 8vw;
+}
+
+.create-form label {
+  font-family: 'SemiBoldMS', sans-serif;
+  font-size: 1.3vw;
+  color: #333;
+  margin-bottom: 0.5vw;
+  display: block;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1vw;
+  font-family: 'SemiBoldMS', sans-serif;
+  font-size: 1.5vw;
+  color: #fff;
+  background-color: rgb(60,60,60);
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submit-button:hover {
+  background-color: #000000;
+}
+
+.back-link {
+  font-family: 'regularMS', sans-serif;
+  font-size: 1.2vw;
+  margin-top: 1.5vw;
+}
+
+.back-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
 }

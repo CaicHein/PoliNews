@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<form action="{% url 'news:delete' post.id %}" method="post">
-  {% csrf_token %}
-  <p>
-    Você tem certeza que deseja apagar a publicação "{{ post.titulo }} ({{ post.data_postagem }})"?
-  </p>
-  <button type="submit">Apagar</button>
-</form>
-{% endblock content %}
+<div class="form-container">
+
+    <form action="{% url 'news:delete' post.id %}" method="post" class="create-form">
+        <h2 class="form-title">Confirmar Exclusão</h2>
+        {% csrf_token %}
+        <p class="confirmation-text">
+            Você tem certeza que deseja apagar a publicação "{{ post.titulo }} ({{ post.data_postagem|date }})"?
+        </p>
+        <button type="submit" class="submit-button">Apagar</button>
+    </form>
+</div>
+{% endblock %}
