@@ -9,14 +9,13 @@
         <img src="{{ post.img_url }}"/>
     </div> 
     <div class="textdetail">
-        <h2>{{ post.titulo }}
+        <h2>{{ post.titulo }}</h2>  
             {% if perms.news.add_post %}
             <div class="botoesdetail">
                 <a href="{% url 'news:update' post.id %}"><img src="{% static 'Edit.png' %}" class="editdetail"></a> 
                 <a href="{% url 'news:delete' post.id %}"><img src="{% static 'Icon.png' %}" class="deletedetail"></a>
             </div>
             {% endif%}
-        </h2>
         <div class="catdet">
             <h1>Categorias:</h1>
             {% for categoria in post.categorias.all %}

@@ -240,10 +240,17 @@ footer {
   font-size: 1.8vw;
   color: rgb(173, 173, 173);
 }
-
+.newstext{
+  height: 100%;
+  width: 68vw;
+  margin-right: 2vw;
+  border-radius: 0vw 5vw 5vw 0vw;
+  overflow: hidden; 
+  position: relative; 
+}
 .newsimg{
   height: 100%;
-  width: 40%;
+  width: 40vw;
   background-color: rgb(0, 0, 0);
   margin-left: 0;
   border-radius: 5vw 0vw 0vw 5vw;
@@ -254,7 +261,7 @@ footer {
   width: 100%; 
   height: 100%; 
   object-fit: cover;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 }
@@ -293,11 +300,12 @@ footer {
 
 .textdetail{
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90vw;
-  line-height: 1vw;
+  width: 70vw;
+  line-height: 2vw;
   margin-bottom: 2vw;
 
 }
@@ -309,7 +317,7 @@ footer {
   align-items: center;
   font-family: SemiBoldMS;
   color: white;
-  margin-bottom: -1vw;
+  margin-bottom: 0.8vw;
 }
 .textdetail p{
   font-size: 1.5vw;
@@ -320,10 +328,12 @@ footer {
 .textdetail img:hover{
   filter: invert(100%) sepia(1) saturate(5) hue-rotate(180deg) brightness(0.8);
 }
-
+.botoesdetail{
+  margin-bottom: -1vw;
+}
 .editdetail{
   width: 2vw;
-  margin-left: 1vw;
+  margin-left: 0vw;
 }
 .deletedetail{
   width: 1.8vw;
@@ -416,6 +426,7 @@ ul .nocomment{
 }
 
 .conteudo-inserido{
+  text-align:justify;
   font-family: regularMS;
   font-size: 1.5vw;
   color: white;
@@ -527,7 +538,7 @@ ul .nocomment{
   justify-content: center;
   align-items: center;
   margin-top: 0.8vw;
-  margin-bottom: -1.6vw;
+  margin-bottom: -2vw;
 }
 .catdet a, h1{
   text-decoration: none;

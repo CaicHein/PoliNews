@@ -10,9 +10,9 @@ class Category(models.Model):
         return self.nome
     
 class Post(models.Model):
-    titulo = models.CharField(max_length=255)
+    titulo = models.CharField(max_length=70)
     conteudo = models.TextField()
-    img_url = models.URLField(max_length=255, null=True)
+    img_url = models.URLField(max_length=300, null=True)
     data_postagem = models.DateTimeField(default=timezone.now) 
     categorias = models.ManyToManyField(Category, related_name='posts')
     
